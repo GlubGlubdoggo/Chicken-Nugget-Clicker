@@ -1,9 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
   <link rel="icon" type="img/x-icon" href="https://carolinanewsandreporter.cic.sc.edu/wp-content/uploads/2018/11/FallingNug1.jpg">
+  <title>Chicken Nugget Clicker</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Merriweather&display=swap')
+      * {
+        font-family: 'Merriweather';
+        color: red;
+        background-color: tan;
+    }
+    
+    button {
+      border: 1px solid tan;
+      background-color: transparent;
+      cursor: pointer;
+    }
+    
+    #nuggetImg {
+      width:250px;
+      height: 200px;
+    }
+    
+    #upgrades {
+      float: right;
+      vertical-align: top;
+    }
+    
+    #upgrades img {
+      width: 100px;
+      height: 100px;
+      vertical-align: center;
+    }
+    
+    #upgrades p {
+      display: inline-block;
+    }
+    
+    #upgrades button {
+      display: flex;
+      border: 2px dashed black;
+      width: 300px;
+      height: 110px;
+    }
+    
+    .npc {
+      text-align: right;
+    }
+  </style>
 </html>
 <body>
-  <button onclick="chickenStrips()">chickenStrips()</button>
+  <h2>Chicken nuggets made: <span id="score"></span></h2>
+  <h2 class="npc">NPC (nuggets per click): <span id="npc"></span></h2>
+  <hr />
+  <button onclick="nuggetClicked()"><img src="https://i.ytimg.com/vi/xFqpUWtuRZM/hqdefault.jpg?sqp=-oaymwEiCKgBEF5IWvKriqkDFQgBFQAAAAAYASUAAMhCPQCAokN4AQ==&rs=AOn4CLDgP0scef2q_n9p0LFPgDxcyMtF1A" id="nuggetImg"></button>
   <script>
     var chickenStripsSound = new Audio('./chicken-strips.mp3')
     function chickenStrips() {
